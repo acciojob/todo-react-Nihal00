@@ -13,6 +13,7 @@ const App = () => {
 
     if(input !== ""){
       setTodos([{id: new Date(), todos: input}, ...todos]);
+      setInput("");
     }
   }
 
@@ -25,7 +26,7 @@ const App = () => {
     <div>
         <h3>To-Do List</h3>
         <form onSubmit={update}>
-          <input type="text" onChange={(e) => setInput(e.target.value)} />
+          <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
           <button type="submit">Add Todo</button>
         </form>
 

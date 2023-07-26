@@ -35,10 +35,10 @@ const App = () => {
         {
           todos.map((ele) => 
             
-              <li id={ele.id}>
+              <div id={ele.id}>
                 <p>{ele.todos}</p>
                 <button onClick={ () => del(ele.id)}>Delete</button>
-              </li>
+              </div>
           )
         }
         </ul>

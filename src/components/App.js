@@ -29,15 +29,18 @@ const App = () => {
           <button type="submit">Add Todo</button>
         </form>
 
+
+        <ul >
         {
           todos.map((ele) => 
-            <ul id={ele.id}>
-              <li>{ele.todos}</li>
-              <button onClick={ () => del(ele.id)}>Delete</button>
-            </ul>
+            
+              <li id={ele.id}>
+                <p>{ele.todos}</p>
+                <button onClick={ () => del(ele.id)}>Delete</button>
+              </li>
           )
         }
-        
+        </ul>
     </div>
   )
 }
